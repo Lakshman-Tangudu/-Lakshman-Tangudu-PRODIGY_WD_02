@@ -1,0 +1,106 @@
+body{
+    background-color: black;
+    background: linear-gradient(white,black 200px 550px,white);
+    height: 720px;
+}
+
+#time{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100px);
+}
+
+h1{
+    color: black; 
+    display:inline-block;
+    margin-left: 10px;
+}
+.container{
+    display: grid;
+    border: 2px solid white;
+    width: 360px;
+    height: 360px;
+    text-align: center;
+    align-content: center;
+    border-radius: 180px;
+    font-size: 25px;
+    position: relative;
+    color: white;
+    box-shadow: 0px 0px 10px white;
+}
+
+.buttons{
+    display:grid;
+    grid-template-columns: repeat(4,auto);
+    margin-top: 20px;
+}
+
+.start,.stop,.reset,.lap{
+    width: 70px;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 10px;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.start:active,
+.stop:active,
+.reset:active,
+.lap:active
+{
+    border: 2px solid white;
+}
+
+.start{
+    margin-left: 10px;
+    background-color: rgb(105, 239, 105);
+}
+
+.start:hover{
+    background-color: rgb(53, 231, 53);
+}
+
+.stop{
+    background-color: rgb(243, 48, 48);
+}
+
+.stop:hover{
+    background-color: rgb(246, 11, 11);
+}
+
+.reset{
+    background-color: rgb(88, 88, 237);
+}
+
+.reset:hover{
+    background-color: rgb(33, 33, 248);
+}
+
+.lap{
+    background-color: rgb(245, 245, 83);
+}
+
+.lap:hover{
+    background-color: rgb(245, 245, 22);
+}
+
+#laps{
+    position: absolute;
+    color: white;
+    overflow-y:auto;
+    height:100px;
+    transform: translate(70%,230%);
+    font-size: 20px;
+}
+
+#laps::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers (Chrome, Safari, etc.) */
+}
